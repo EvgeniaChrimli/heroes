@@ -24,7 +24,7 @@ type GLTFResult = GLTF & {
 export function Model(props: JSX.IntrinsicElements["group"]) {
   const group = useRef<THREE.Group>(null!);
   const { nodes, materials, animations } = useGLTF(
-    process.env.PUBLIC_URL + "/models/scene.gltf"
+    import.meta.env.BASE_URL + "models/scene.gltf"
   ) as unknown as GLTFResult;
   const { actions } = useAnimations(animations, group);
   const [isScroll, setIsScroll] = React.useState(false);
@@ -120,4 +120,4 @@ export function Model(props: JSX.IntrinsicElements["group"]) {
   );
 }
 
-useGLTF.preload(process.env.PUBLIC_URL + "/models/scene.gltf");
+useGLTF.preload(import.meta.env.BASE_URL + "models/scene.gltf");
