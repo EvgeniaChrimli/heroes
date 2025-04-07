@@ -20,10 +20,7 @@ const router = createBrowserRouter(
       <Route path="hero/:id" element={<HeroPage />} />
       <Route path="create" element={<CreateHero />} />
     </Route>
-  ),
-  {
-    basename: "/heroes",
-  }
+  )
 );
 
 createRoot(document.getElementById("root")!).render(

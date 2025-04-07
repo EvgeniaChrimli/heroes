@@ -21,6 +21,7 @@ type GLTFResult = GLTF & {
   };
 };
 
+console.log(import.meta.env.BASE_URL);
 export function Model(props: JSX.IntrinsicElements["group"]) {
   const group = useRef<THREE.Group>(null!);
   const { nodes, materials, animations } = useGLTF(
