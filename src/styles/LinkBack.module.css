@@ -1,0 +1,16 @@
+.link {
+  border: 1px solid #ffff;
+  cursor: pointer;
+  border-radius: 24px;
+  color: #ffff;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 9px 26px;
+  scale: 1;
+  transition: all 1s;
+  background-color: transparent;
+}
+
+.link:hover {
+  border: 1px solid rgba(132, 0, 255, 1);
+}

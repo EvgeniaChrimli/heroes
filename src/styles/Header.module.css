@@ -1,0 +1,31 @@
+.container {
+  margin: 0 auto;
+  max-width: 1087px;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10px;
+  align-items: center;
+}
+
+.link {
+  border: 1px solid rgba(132, 0, 255, 1);
+  background-color: transparent;
+  padding: 8px 14px;
+  font-size: 16;
+  color: rgba(132, 0, 255, 1);
+  text-decoration: none;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: all 1s;
+}
+.link:hover {
+  color: #fff;
+}
+.nav {
+}
+.list {
+  display: flex;
+  gap: 10px;
+}
