@@ -20,6 +20,7 @@ const HomePage = () => {
 
   const [currentPage, setCurrentPage] = React.useState(1);
   const ITEMS_PER_PAGE = 10;
+  const [isHovered, setIsHovered] = React.useState(false);
 
   const handlePgeChange = (page: number) => {
     setCurrentPage(page);
@@ -81,20 +82,26 @@ const HomePage = () => {
         <div className={styles.gradient2}></div>
 
         <div className={styles.row}>
-          <ul className={styles.list}>
+          <ul
+            className={`${styles.list} ${isHovered ? styles.hovered : ""}`}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
             {filteredHeroes.map((item) => (
               <li key={item.id} className={styles.item}>
-                <img
-                  className={styles.img}
-                  src={baseImgUrl + item.img}
-                  alt="heroImage"
-                />
                 <Link className={styles.link} to={`/hero/${item.id}`}>
+                  <img
+                    className={styles.img}
+                    src={baseImgUrl + item.img}
+                    alt="heroImage"
+                  />
+
                   <span className={styles.name}>{item.localized_name}</span>
+
+                  <span className={styles.roles}>
+                    Base health:{item.base_health}
+                  </span>
                 </Link>
-                <span className={styles.roles}>
-                  Base health:{item.base_health}
-                </span>
 
                 <div className={styles.btnContainer}>
                   <img

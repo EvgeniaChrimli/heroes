@@ -23,8 +23,6 @@
   z-index: -1;
 }
 
-.col {
-}
 .form {
   padding-top: 150px;
   display: flex;
@@ -54,4 +52,10 @@
 }
 .button:hover {
   scale: 1.1;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

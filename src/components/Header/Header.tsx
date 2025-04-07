@@ -14,13 +14,13 @@ const Header = () => {
         <nav className={styles.nav}>
           <ul className={styles.list}>
             <li className={styles.item}>
-              <DarkButton name="Home" />
+              <DarkButton name="Домой" />
             </li>
             <li className={styles.item}>
-              <DarkButton name="About" />
+              <DarkButton name="Матчи" />
             </li>
             <li className={styles.item}>
-              <DarkButton name="Contacts" />
+              <DarkButton name="Рейтинг" />
             </li>
           </ul>
         </nav>

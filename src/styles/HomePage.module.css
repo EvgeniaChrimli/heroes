@@ -26,6 +26,7 @@ select {
   flex-wrap: wrap;
   gap: 40px;
 }
+
 .item {
   display: flex;
   flex-direction: column;
@@ -34,20 +35,27 @@ select {
   max-width: 400px;
   border-radius: 24px;
   padding: 20px;
+  transition: filter 0.5s ease;
+}
+
+.hovered .item {
+  filter: blur(1px);
+}
+
+.item:hover {
+  filter: none;
+  z-index: 1;
 }
 
 .link {
   text-decoration: none;
   color: #ffff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  cursor: pointer;
 }
-.name {
-  padding-top: 10px;
-  margin-bottom: 10px;
-}
-.roles {
-  text-decoration: none;
-  color: #ffff;
-}
+
 .img {
   width: 100%;
   max-width: 256px;
@@ -63,7 +71,14 @@ select {
   cursor: pointer;
   width: 30px;
   height: 30px;
+  scale: 1;
+  transition: all 1s;
 }
+
+.svg:hover {
+  scale: 1.1;
+}
+
 .svgActive {
   cursor: pointer;
   width: 30px;
@@ -111,10 +126,10 @@ select {
   display: flex;
   gap: 30px;
   justify-content: center;
-  margin-top: 30px;
+  padding-top: 30px;
+  margin-bottom: 50px;
 }
-.prev {
-}
+
 .btn {
   color: #ffff;
   background-color: transparent;
@@ -123,6 +138,11 @@ select {
   padding: 15px 20px;
   font-size: 16px;
   cursor: pointer;
+  transition: all 1s;
+}
+
+.btn:hover {
+  box-shadow: 0 0 10px #eee;
 }
 .canvaContainer {
   width: 200px;
