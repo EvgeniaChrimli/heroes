@@ -22,7 +22,7 @@ const router = createBrowserRouter(
     </Route>
   ),
   {
-    basename: "/Dotaheroes",
+    basename: "/heroes",
   }
 );
 
