@@ -1,13 +1,10 @@
-import { Canvas } from "@react-three/fiber";
-import React, { Suspense } from "react";
+import React from "react";
 import { fetchAllHero } from "../components/Heroes/heroThunk";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../redux/store";
 import { baseImgUrl } from "../constants/constants";
 import { Link } from "react-router-dom";
 import { removeHero } from "../redux/allHeroes/allHeroesSlice";
-import { OrbitControls } from "@react-three/drei";
-import ScrollAnimation from "../components/model/ScrollAnimation";
 import del from "../assets/images/delet.svg";
 import favorite from "../assets/images/favor.svg";
 import styles from "../styles/HomePage.module.css";
@@ -119,22 +116,6 @@ const HomePage = () => {
               </li>
             ))}
           </ul>
-
-          <div className={styles.canvaContainer}>
-            <Canvas
-              camera={{
-                fov: 50,
-                position: [0, 0, 5],
-              }}
-            >
-              <Suspense fallback={null}>
-                <ScrollAnimation />
-                <ambientLight intensity={1} />
-                <directionalLight position={[10, 10, 10]} intensity={0.5} />
-                <OrbitControls />
-              </Suspense>
-            </Canvas>
-          </div>
         </div>
         <div className={styles.navBtn}>
           <button
