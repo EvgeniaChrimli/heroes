@@ -66,7 +66,9 @@ const CreateHero = () => {
     <>
       <Header />
       <section className={styles.sectionForm}>
-        <LinkBack />
+        <div className={styles.link}>
+          <LinkBack />
+        </div>
         <div className={styles.gradient}></div>
         <div className={styles.container}>
           <form className={styles.form} onSubmit={handleSubmit}>

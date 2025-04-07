@@ -6,6 +6,7 @@
   display: flex;
   justify-content: space-between;
   margin: 0 10px;
+  padding: 20px;
   align-items: center;
 }
 
@@ -25,7 +26,11 @@
 }
 .nav {
 }
+.item {
+  text-decoration: none;
+}
 .list {
   display: flex;
   gap: 10px;
+  text-decoration: none;
 }
